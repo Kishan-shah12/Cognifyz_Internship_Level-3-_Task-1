@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A feature-rich demonstration of advanced pure CSS techniques including Ken Burns slideshows, masonry grids, and detailed lightboxes.">
+    <title>CSS Mastery | Enhanced Features</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Animated Background Elements -->
+    <div class="bg-elements">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <header>
+        <h1>CSS Visual Dynamics <span>Pro</span></h1>
+        <p class="subtitle">An expanded exploration of pure CSS featuring masonry grids, advanced hover metadata, split-pane lightboxes, and Ken Burns animations. Zero JavaScript.</p>
+    </header>
+
+    <main>
+        <!-- Section 1: Enhanced Automatic Slideshow -->
+        <section class="slideshow-section">
+            <h2 class="section-title">Ken Burns Slideshow</h2>
+            <div class="slideshow-wrapper">
+                <div class="slideshow-container">
+                    
+                    <div class="slide slide-1">
+                        <div class="slide-content">
+                            <h3>Majestic Valley</h3>
+                            <p>Discover the serene beauty of the endless valley.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slide slide-2">
+                        <div class="slide-content">
+                            <h3>Misty Mountains</h3>
+                            <p>Lose yourself in the enigmatic fog of the peaks.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slide slide-3">
+                        <div class="slide-content">
+                            <h3>Serene Lake</h3>
+                            <p>Calm waters reflecting the majesty of nature.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="slide slide-4">
+                        <div class="slide-content">
+                            <h3>Deep Forest</h3>
+                            <p>Wander through the ancient, whispering woods.</p>
+                        </div>
+                    </div>
+
+                    <div class="slide slide-5">
+                        <div class="slide-content">
+                            <h3>Desert Dunes</h3>
+                            <p>Golden sands sculpted by the eternal wind.</p>
+                        </div>
+                    </div>
+
+                    <!-- CSS Progress Bar tracking the 5-second interval -->
+                    <div class="progress-bar-container">
+                        <div class="progress-bar"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Masonry Interactive Gallery -->
+        <section class="gallery-section">
+            <h2 class="section-title">Masonry Data Gallery</h2>
+            <p class="section-desc">Hover over images to reveal technical metadata. Click to open detailed split-pane lightboxes.</p>
+            <div class="gallery-wrapper">
+                
+                <!-- Pure CSS Filter Inputs -->
+                <input type="radio" id="filter-all" name="gallery-filter" class="filter-input" checked>
+                <input type="radio" id="filter-nature" name="gallery-filter" class="filter-input">
+                <input type="radio" id="filter-city" name="gallery-filter" class="filter-input">
+                <input type="radio" id="filter-space" name="gallery-filter" class="filter-input">
+                
+                <div class="filter-controls">
+                    <label for="filter-all" class="filter-label">All Photos</label>
+                    <label for="filter-nature" class="filter-label">Nature</label>
+                    <label for="filter-city" class="filter-label">Cityscapes</label>
+                    <label for="filter-space" class="filter-label">Astrophotography</label>
+                </div>
+
+                <div class="gallery-grid">
+
+                    
+                    <!-- Item 1 -->
+                    <div class="gallery-item category-nature">
+                        <a href="#lightbox-1" aria-label="Open image 1">
+                            <img src="images/swiss_alps_600x800_16.jpg" alt="Sunset Peaks" loading="lazy">
+                            <div class="item-details">
+                                <span class="view-btn">Inspect Details</span>
+                                <h4>Sunset Peaks</h4>
+                                <p class="location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Swiss Alps</p>
+                                <div class="tech-specs">
+                                    <span>16mm</span><span>f/8</span><span>1/100s</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="gallery-item category-nature">
+                        <a href="#lightbox-2" aria-label="Open image 2">
+                            <img src="images/road_italy_600x800_18.jpg" alt="Winding Road" loading="lazy">
+                            <div class="item-details">
+                                <span class="view-btn">Inspect Details</span>
+                                <h4>Winding Road</h4>
+                                <p class="location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Tuscany, Italy</p>
+                                <div class="tech-specs">
+                                    <span>50mm</span><span>f/4</span><span>1/250s</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="gallery-item category-nature">
+                        <a href="#lightbox-3" aria-label="Open image 3">
+                            <img src="images/rainforest_600x800_19.jpg" alt="Lush Canopy" loading="lazy">
+                            <div class="item-details">
+                                <span class="view-btn">Inspect Details</span>
+                                <h4>Lush Canopy</h4>
+                                <p class="location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Amazon, Brazil</p>
+                                <div class="tech-specs">
+                                    <span>24mm</span><span>f/2.8</span><span>1/500s</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="gallery-item category-nature">
+                        <a href="#lightbox-4" aria-label="Open image 4">
+                            <img src="images/tropical_beach_600x800_17.jpg" alt="Tropical Shores" loading="lazy">
+                            <div class="item-details">
+                                <span class="view-btn">Inspect Details</span>
+                                <h4>Tropical Shores</h4>
+                                <p class="location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Maldives</p>
+                                <div class="tech-specs">
+                                    <span>35mm</span><span>f/5.6</span><span>1/1000s</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="gallery-item category-space">
+                        <a href="#lightbox-5" aria-label="Open image 5">
+                            <img src="images/stars_norway_600x800_23.jpg" alt="Starry Reflection" loading="lazy">
+                            <div class="item-details">
+                                <span class="view-btn">Inspect Details</span>
+                                <h4>Starry Reflection</h4>
+                                <p class="location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Tromso, Norway</p>
+                                <div class="tech-specs">
+                                    <span>14mm</span><span>f/1.8</span><span>15s</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="gallery-item category-space">
+                        <a href="#lightbox-6" aria-label="Open image 6">
+                            <img src="images/milkyway_600x800_13.jpg" alt="Milky Way Core" loading="lazy">
+                            <div class="item-details">
+                                <span class="view-btn">Inspect Details</span>
+                                <h4>Milky Way Core</h4>
+                                <p class="location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Atacama, Chile</p>
+                                <div class="tech-specs">
+                                    <span>20mm</span><span>f/1.4</span><span>20s</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 7 -->
+                    <div class="gallery-item category-city">
+                        <a href="#lightbox-7" aria-label="Open image 7">
+                            <img src="images/newyork_city_600x800_31.jpg" alt="Urban Jungle" loading="lazy">
+                            <div class="item-details">
+                                <span class="view-btn">Inspect Details</span>
+                                <h4>Urban Jungle</h4>
+                                <p class="location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> New York, USA</p>
+                                <div class="tech-specs">
+                                    <span>70mm</span><span>f/8</span><span>1/200s</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 8 -->
+                    <div class="gallery-item category-nature">
+                        <a href="#lightbox-8" aria-label="Open image 8">
+                            <img src="images/autumn_leaves_600x800_14.jpg" alt="Autumn Contrast" loading="lazy">
+                            <div class="item-details">
+                                <span class="view-btn">Inspect Details</span>
+                                <h4>Autumn Contrast</h4>
+                                <p class="location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Kyoto, Japan</p>
+                                <div class="tech-specs">
+                                    <span>85mm</span><span>f/1.8</span><span>1/800s</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 9 -->
+                    <div class="gallery-item category-nature">
+                        <a href="#lightbox-9" aria-label="Open image 9">
+                            <img src="images/glacier_ice_600x800_7.jpg" alt="Glacier Ice" loading="lazy">
+                            <div class="item-details">
+                                <span class="view-btn">Inspect Details</span>
+                                <h4>Glacier Ice</h4>
+                                <p class="location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Vatnajökull, Iceland</p>
+                                <div class="tech-specs">
+                                    <span>16mm</span><span>f/11</span><span>2s</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 10 -->
+                    <div class="gallery-item category-nature">
+                        <a href="#lightbox-10" aria-label="Open image 10">
+                            <img src="images/canyon_600x800_5.jpg" alt="Canyon Colors" loading="lazy">
+                            <div class="item-details">
+                                <span class="view-btn">Inspect Details</span>
+                                <h4>Canyon Colors</h4>
+                                <p class="location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Grand Canyon, USA</p>
+                                <div class="tech-specs">
+                                    <span>200mm</span><span>f/11</span><span>1/60s</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 11 -->
+                    <div class="gallery-item category-nature">
+                        <a href="#lightbox-11" aria-label="Open image 11">
+                            <img src="images/forest_fog_600x800_26.jpg" alt="Mystic Forest" loading="lazy">
+                            <div class="item-details">
+                                <span class="view-btn">Inspect Details</span>
+                                <h4>Mystic Forest</h4>
+                                <p class="location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Black Forest, Germany</p>
+                                <div class="tech-specs">
+                                    <span>35mm</span><span>f/2.8</span><span>1/125s</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 12 -->
+                    <div class="gallery-item category-city">
+                        <a href="#lightbox-12" aria-label="Open image 12">
+                            <img src="images/goldengate_600x800_2.jpg" alt="Golden Gate Bridge" loading="lazy">
+                            <div class="item-details">
+                                <span class="view-btn">Inspect Details</span>
+                                <h4>Golden Gate Bridge</h4>
+                                <p class="location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> San Francisco, USA</p>
+                                <div class="tech-specs">
+                                    <span>70mm</span><span>f/8</span><span>15s</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 13 -->
+                    <div class="gallery-item category-nature">
+                        <a href="#lightbox-13" aria-label="Open image 13">
+                            <img src="images/cherryblossom_600x800_0.jpg" alt="Sakura Bloom" loading="lazy">
+                            <div class="item-details">
+                                <span class="view-btn">Inspect Details</span>
+                                <h4>Sakura Bloom</h4>
+                                <p class="location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Tokyo, Japan</p>
+                                <div class="tech-specs">
+                                    <span>50mm</span><span>f/1.8</span><span>1/2000s</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 14 -->
+                    <div class="gallery-item category-space">
+                        <a href="#lightbox-14" aria-label="Open image 14">
+                            <img src="images/mountains_stars_600x800_21.jpg" alt="Mountain Starscape" loading="lazy">
+                            <div class="item-details">
+                                <span class="view-btn">Inspect Details</span>
+                                <h4>Mountain Starscape</h4>
+                                <p class="location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Dolomites, Italy</p>
+                                <div class="tech-specs">
+                                    <span>14mm</span><span>f/1.4</span><span>20s</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 15 -->
+                    <div class="gallery-item category-nature">
+                        <a href="#lightbox-15" aria-label="Open image 15">
+                            <img src="images/ocean_waves_600x800_25.jpg" alt="Ocean Waves" loading="lazy">
+                            <div class="item-details">
+                                <span class="view-btn">Inspect Details</span>
+                                <h4>Ocean Waves</h4>
+                                <p class="location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Gold Coast, Australia</p>
+                                <div class="tech-specs">
+                                    <span>200mm</span><span>f/5.6</span><span>1/4000s</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Item 16 -->
+                    <div class="gallery-item category-city">
+                        <a href="#lightbox-16" aria-label="Open image 16">
+                            <img src="images/swiss_village_600x800_20.jpg" alt="Alpine Village" loading="lazy">
+                            <div class="item-details">
+                                <span class="view-btn">Inspect Details</span>
+                                <h4>Alpine Village</h4>
+                                <p class="location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Zermatt, Switzerland</p>
+                                <div class="tech-specs">
+                                    <span>24mm</span><span>f/8</span><span>1/250s</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Detailed Lightboxes -->
+    
+    <!-- Lightbox 1 -->
+    <div id="lightbox-1" class="lightbox">
+        <a href="#_" class="lightbox-close-overlay" aria-label="Close lightbox"></a>
+        <div class="lightbox-content enhanced">
+            <a href="#_" class="close-btn" aria-label="Close lightbox">&times;</a>
+            <div class="lightbox-image-wrapper">
+                <img src="images/swiss_alps_900x1600_8.jpg" alt="Sunset Peaks">
+            </div>
+            <div class="lightbox-info">
+                <h2>Sunset Peaks</h2>
+                <div class="info-divider"></div>
+                <p class="description">A breathtaking view of the sun cresting over the snow-capped peaks of the Swiss Alps, casting a golden glow over the valley below.</p>
+                <div class="metadata-grid">
+                    <div class="meta-item"><span class="meta-label">Location</span><span class="meta-value">Swiss Alps, Switzerland</span></div>
+                    <div class="meta-item"><span class="meta-label">Photographer</span><span class="meta-value">Jane Doe</span></div>
+                    <div class="meta-item"><span class="meta-label">Camera</span><span class="meta-value">Sony A7R IV</span></div>
+                    <div class="meta-item"><span class="meta-label">Settings</span><span class="meta-value">16mm • f/8 • 1/100s • ISO 100</span></div>
+                    <div class="meta-item"><span class="meta-label">Resolution</span><span class="meta-value">6000 x 4000</span></div>
+                </div>
+                <div class="action-buttons"><a href="#_" class="btn btn-primary">Return to Gallery</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox 2 -->
+    <div id="lightbox-2" class="lightbox">
+        <a href="#_" class="lightbox-close-overlay" aria-label="Close lightbox"></a>
+        <div class="lightbox-content enhanced">
+            <a href="#_" class="close-btn" aria-label="Close lightbox">&times;</a>
+            <div class="lightbox-image-wrapper">
+                <img src="images/road_italy_900x1600_6.jpg" alt="Winding Road">
+            </div>
+            <div class="lightbox-info">
+                <h2>Winding Road</h2>
+                <div class="info-divider"></div>
+                <p class="description">An ancient serpentine road cutting through the lush green hills of the Italian countryside, enveloped in the soft morning mist.</p>
+                <div class="metadata-grid">
+                    <div class="meta-item"><span class="meta-label">Location</span><span class="meta-value">Tuscany, Italy</span></div>
+                    <div class="meta-item"><span class="meta-label">Photographer</span><span class="meta-value">Marco Rossi</span></div>
+                    <div class="meta-item"><span class="meta-label">Camera</span><span class="meta-value">Canon EOS R5</span></div>
+                    <div class="meta-item"><span class="meta-label">Settings</span><span class="meta-value">50mm • f/4 • 1/250s • ISO 200</span></div>
+                    <div class="meta-item"><span class="meta-label">Resolution</span><span class="meta-value">8192 x 5464</span></div>
+                </div>
+                <div class="action-buttons"><a href="#_" class="btn btn-primary">Return to Gallery</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox 3 -->
+    <div id="lightbox-3" class="lightbox">
+        <a href="#_" class="lightbox-close-overlay" aria-label="Close lightbox"></a>
+        <div class="lightbox-content enhanced">
+            <a href="#_" class="close-btn" aria-label="Close lightbox">&times;</a>
+            <div class="lightbox-image-wrapper">
+                <img src="images/rainforest_900x1600_9.jpg" alt="Lush Canopy">
+            </div>
+            <div class="lightbox-info">
+                <h2>Lush Canopy</h2>
+                <div class="info-divider"></div>
+                <p class="description">Looking up into the dense, vibrant canopy of the rainforest. Sunlight pierces through the leaves, creating an ethereal atmosphere.</p>
+                <div class="metadata-grid">
+                    <div class="meta-item"><span class="meta-label">Location</span><span class="meta-value">Amazon, Brazil</span></div>
+                    <div class="meta-item"><span class="meta-label">Photographer</span><span class="meta-value">Elena Silva</span></div>
+                    <div class="meta-item"><span class="meta-label">Camera</span><span class="meta-value">Nikon Z9</span></div>
+                    <div class="meta-item"><span class="meta-label">Settings</span><span class="meta-value">24mm • f/2.8 • 1/500s • ISO 400</span></div>
+                    <div class="meta-item"><span class="meta-label">Resolution</span><span class="meta-value">8256 x 5504</span></div>
+                </div>
+                <div class="action-buttons"><a href="#_" class="btn btn-primary">Return to Gallery</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox 4 -->
+    <div id="lightbox-4" class="lightbox">
+        <a href="#_" class="lightbox-close-overlay" aria-label="Close lightbox"></a>
+        <div class="lightbox-content enhanced">
+            <a href="#_" class="close-btn" aria-label="Close lightbox">&times;</a>
+            <div class="lightbox-image-wrapper">
+                <img src="images/tropical_beach_900x1600_27.jpg" alt="Tropical Shores">
+            </div>
+            <div class="lightbox-info">
+                <h2>Tropical Shores</h2>
+                <div class="info-divider"></div>
+                <p class="description">Crystal clear turquoise waters gently washing over pristine white sands. A perfect slice of island paradise.</p>
+                <div class="metadata-grid">
+                    <div class="meta-item"><span class="meta-label">Location</span><span class="meta-value">Maldives</span></div>
+                    <div class="meta-item"><span class="meta-label">Photographer</span><span class="meta-value">John Smith</span></div>
+                    <div class="meta-item"><span class="meta-label">Camera</span><span class="meta-value">Sony A7 IV</span></div>
+                    <div class="meta-item"><span class="meta-label">Settings</span><span class="meta-value">35mm • f/5.6 • 1/1000s • ISO 100</span></div>
+                    <div class="meta-item"><span class="meta-label">Resolution</span><span class="meta-value">7000 x 4666</span></div>
+                </div>
+                <div class="action-buttons"><a href="#_" class="btn btn-primary">Return to Gallery</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox 5 -->
+    <div id="lightbox-5" class="lightbox">
+        <a href="#_" class="lightbox-close-overlay" aria-label="Close lightbox"></a>
+        <div class="lightbox-content enhanced">
+            <a href="#_" class="close-btn" aria-label="Close lightbox">&times;</a>
+            <div class="lightbox-image-wrapper">
+                <img src="images/stars_norway_900x1600_29.jpg" alt="Starry Reflection">
+            </div>
+            <div class="lightbox-info">
+                <h2>Starry Reflection</h2>
+                <div class="info-divider"></div>
+                <p class="description">The calm waters of a remote fjord perfectly mirroring the starlit night sky, creating a sense of infinite space.</p>
+                <div class="metadata-grid">
+                    <div class="meta-item"><span class="meta-label">Location</span><span class="meta-value">Tromso, Norway</span></div>
+                    <div class="meta-item"><span class="meta-label">Photographer</span><span class="meta-value">Lars Jensen</span></div>
+                    <div class="meta-item"><span class="meta-label">Camera</span><span class="meta-value">Sony A7S III</span></div>
+                    <div class="meta-item"><span class="meta-label">Settings</span><span class="meta-value">14mm • f/1.8 • 15s • ISO 3200</span></div>
+                    <div class="meta-item"><span class="meta-label">Resolution</span><span class="meta-value">4240 x 2832</span></div>
+                </div>
+                <div class="action-buttons"><a href="#_" class="btn btn-primary">Return to Gallery</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox 6 -->
+    <div id="lightbox-6" class="lightbox">
+        <a href="#_" class="lightbox-close-overlay" aria-label="Close lightbox"></a>
+        <div class="lightbox-content enhanced">
+            <a href="#_" class="close-btn" aria-label="Close lightbox">&times;</a>
+            <div class="lightbox-image-wrapper">
+                <img src="images/milkyway_900x1600_3.jpg" alt="Milky Way Core">
+            </div>
+            <div class="lightbox-info">
+                <h2>Milky Way Core</h2>
+                <div class="info-divider"></div>
+                <p class="description">The galactic core shines brilliantly over the barren desert landscape, capturing the majesty of our home galaxy.</p>
+                <div class="metadata-grid">
+                    <div class="meta-item"><span class="meta-label">Location</span><span class="meta-value">Atacama Desert, Chile</span></div>
+                    <div class="meta-item"><span class="meta-label">Photographer</span><span class="meta-value">Maria Garcia</span></div>
+                    <div class="meta-item"><span class="meta-label">Camera</span><span class="meta-value">Canon 1DX Mark III</span></div>
+                    <div class="meta-item"><span class="meta-label">Settings</span><span class="meta-value">20mm • f/1.4 • 20s • ISO 6400</span></div>
+                    <div class="meta-item"><span class="meta-label">Resolution</span><span class="meta-value">5472 x 3648</span></div>
+                </div>
+                <div class="action-buttons"><a href="#_" class="btn btn-primary">Return to Gallery</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox 7 -->
+    <div id="lightbox-7" class="lightbox">
+        <a href="#_" class="lightbox-close-overlay" aria-label="Close lightbox"></a>
+        <div class="lightbox-content enhanced">
+            <a href="#_" class="close-btn" aria-label="Close lightbox">&times;</a>
+            <div class="lightbox-image-wrapper">
+                <img src="images/newyork_city_900x1600_28.jpg" alt="Urban Jungle">
+            </div>
+            <div class="lightbox-info">
+                <h2>Urban Jungle</h2>
+                <div class="info-divider"></div>
+                <p class="description">The concrete canyons of Manhattan. Towering skyscrapers reach into the sky, demonstrating the scale of human engineering.</p>
+                <div class="metadata-grid">
+                    <div class="meta-item"><span class="meta-label">Location</span><span class="meta-value">New York City, USA</span></div>
+                    <div class="meta-item"><span class="meta-label">Photographer</span><span class="meta-value">Alex Johnson</span></div>
+                    <div class="meta-item"><span class="meta-label">Camera</span><span class="meta-value">Fujifilm GFX 100S</span></div>
+                    <div class="meta-item"><span class="meta-label">Settings</span><span class="meta-value">70mm • f/8 • 1/200s • ISO 100</span></div>
+                    <div class="meta-item"><span class="meta-label">Resolution</span><span class="meta-value">11648 x 8736</span></div>
+                </div>
+                <div class="action-buttons"><a href="#_" class="btn btn-primary">Return to Gallery</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox 8 -->
+    <div id="lightbox-8" class="lightbox">
+        <a href="#_" class="lightbox-close-overlay" aria-label="Close lightbox"></a>
+        <div class="lightbox-content enhanced">
+            <a href="#_" class="close-btn" aria-label="Close lightbox">&times;</a>
+            <div class="lightbox-image-wrapper">
+                <img src="images/autumn_leaves_900x1600_10.jpg" alt="Autumn Contrast">
+            </div>
+            <div class="lightbox-info">
+                <h2>Autumn Contrast</h2>
+                <div class="info-divider"></div>
+                <p class="description">Vibrant red and orange maple leaves stand out sharply against a moody, overcast autumn sky.</p>
+                <div class="metadata-grid">
+                    <div class="meta-item"><span class="meta-label">Location</span><span class="meta-value">Kyoto, Japan</span></div>
+                    <div class="meta-item"><span class="meta-label">Photographer</span><span class="meta-value">Kenji Sato</span></div>
+                    <div class="meta-item"><span class="meta-label">Camera</span><span class="meta-value">Sony A1</span></div>
+                    <div class="meta-item"><span class="meta-label">Settings</span><span class="meta-value">85mm • f/1.8 • 1/800s • ISO 200</span></div>
+                    <div class="meta-item"><span class="meta-label">Resolution</span><span class="meta-value">8640 x 5760</span></div>
+                </div>
+                <div class="action-buttons"><a href="#_" class="btn btn-primary">Return to Gallery</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox 9 -->
+    <div id="lightbox-9" class="lightbox">
+        <a href="#_" class="lightbox-close-overlay" aria-label="Close lightbox"></a>
+        <div class="lightbox-content enhanced">
+            <a href="#_" class="close-btn" aria-label="Close lightbox">&times;</a>
+            <div class="lightbox-image-wrapper">
+                <img src="images/glacier_ice_900x1600_15.jpg" alt="Glacier Ice">
+            </div>
+            <div class="lightbox-info">
+                <h2>Glacier Ice</h2>
+                <div class="info-divider"></div>
+                <p class="description">Ancient blue ice formations in a glacial cave, carved by subglacial meltwater over centuries.</p>
+                <div class="metadata-grid">
+                    <div class="meta-item"><span class="meta-label">Location</span><span class="meta-value">Vatnajökull, Iceland</span></div>
+                    <div class="meta-item"><span class="meta-label">Photographer</span><span class="meta-value">Anna Olafsson</span></div>
+                    <div class="meta-item"><span class="meta-label">Camera</span><span class="meta-value">Nikon D850</span></div>
+                    <div class="meta-item"><span class="meta-label">Settings</span><span class="meta-value">16mm • f/11 • 2s • ISO 100</span></div>
+                    <div class="meta-item"><span class="meta-label">Resolution</span><span class="meta-value">8256 x 5504</span></div>
+                </div>
+                <div class="action-buttons"><a href="#_" class="btn btn-primary">Return to Gallery</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox 10 -->
+    <div id="lightbox-10" class="lightbox">
+        <a href="#_" class="lightbox-close-overlay" aria-label="Close lightbox"></a>
+        <div class="lightbox-content enhanced">
+            <a href="#_" class="close-btn" aria-label="Close lightbox">&times;</a>
+            <div class="lightbox-image-wrapper">
+                <img src="images/canyon_900x1600_22.jpg" alt="Canyon Colors">
+            </div>
+            <div class="lightbox-info">
+                <h2>Canyon Colors</h2>
+                <div class="info-divider"></div>
+                <p class="description">Layers of sedimentary rock expose millions of years of geological history, illuminated by the setting sun.</p>
+                <div class="metadata-grid">
+                    <div class="meta-item"><span class="meta-label">Location</span><span class="meta-value">Grand Canyon, USA</span></div>
+                    <div class="meta-item"><span class="meta-label">Photographer</span><span class="meta-value">David Lee</span></div>
+                    <div class="meta-item"><span class="meta-label">Camera</span><span class="meta-value">Canon EOS R3</span></div>
+                    <div class="meta-item"><span class="meta-label">Settings</span><span class="meta-value">200mm • f/11 • 1/60s • ISO 100</span></div>
+                    <div class="meta-item"><span class="meta-label">Resolution</span><span class="meta-value">6000 x 4000</span></div>
+                </div>
+                <div class="action-buttons"><a href="#_" class="btn btn-primary">Return to Gallery</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox 11 -->
+    <div id="lightbox-11" class="lightbox">
+        <a href="#_" class="lightbox-close-overlay" aria-label="Close lightbox"></a>
+        <div class="lightbox-content enhanced">
+            <a href="#_" class="close-btn" aria-label="Close lightbox">&times;</a>
+            <div class="lightbox-image-wrapper">
+                <img src="images/forest_fog_900x1600_12.jpg" alt="Mystic Forest">
+            </div>
+            <div class="lightbox-info">
+                <h2>Mystic Forest</h2>
+                <div class="info-divider"></div>
+                <p class="description">Deep within the Black Forest, a mystic fog rolls through the ancient pines, creating an atmosphere straight out of a fairy tale.</p>
+                <div class="metadata-grid">
+                    <div class="meta-item"><span class="meta-label">Location</span><span class="meta-value">Black Forest, Germany</span></div>
+                    <div class="meta-item"><span class="meta-label">Photographer</span><span class="meta-value">Emma Weber</span></div>
+                    <div class="meta-item"><span class="meta-label">Camera</span><span class="meta-value">Nikon D780</span></div>
+                    <div class="meta-item"><span class="meta-label">Settings</span><span class="meta-value">35mm • f/2.8 • 1/125s • ISO 400</span></div>
+                    <div class="meta-item"><span class="meta-label">Resolution</span><span class="meta-value">6000 x 4000</span></div>
+                </div>
+                <div class="action-buttons"><a href="#_" class="btn btn-primary">Return to Gallery</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox 12 -->
+    <div id="lightbox-12" class="lightbox">
+        <a href="#_" class="lightbox-close-overlay" aria-label="Close lightbox"></a>
+        <div class="lightbox-content enhanced">
+            <a href="#_" class="close-btn" aria-label="Close lightbox">&times;</a>
+            <div class="lightbox-image-wrapper">
+                <img src="images/goldengate_900x1600_24.jpg" alt="Golden Gate Bridge">
+            </div>
+            <div class="lightbox-info">
+                <h2>Golden Gate Bridge</h2>
+                <div class="info-divider"></div>
+                <p class="description">The iconic Golden Gate Bridge emerges from the thick San Francisco fog during the blue hour, its lights cutting through the mist.</p>
+                <div class="metadata-grid">
+                    <div class="meta-item"><span class="meta-label">Location</span><span class="meta-value">San Francisco, USA</span></div>
+                    <div class="meta-item"><span class="meta-label">Photographer</span><span class="meta-value">James Smith</span></div>
+                    <div class="meta-item"><span class="meta-label">Camera</span><span class="meta-value">Sony A7 IV</span></div>
+                    <div class="meta-item"><span class="meta-label">Settings</span><span class="meta-value">70mm • f/8 • 15s • ISO 100</span></div>
+                    <div class="meta-item"><span class="meta-label">Resolution</span><span class="meta-value">7000 x 4666</span></div>
+                </div>
+                <div class="action-buttons"><a href="#_" class="btn btn-primary">Return to Gallery</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox 13 -->
+    <div id="lightbox-13" class="lightbox">
+        <a href="#_" class="lightbox-close-overlay" aria-label="Close lightbox"></a>
+        <div class="lightbox-content enhanced">
+            <a href="#_" class="close-btn" aria-label="Close lightbox">&times;</a>
+            <div class="lightbox-image-wrapper">
+                <img src="images/cherryblossom_900x1600_30.jpg" alt="Sakura Bloom">
+            </div>
+            <div class="lightbox-info">
+                <h2>Sakura Bloom</h2>
+                <div class="info-divider"></div>
+                <p class="description">Delicate pink cherry blossoms in full bloom along the Meguro River, signaling the arrival of spring in Tokyo.</p>
+                <div class="metadata-grid">
+                    <div class="meta-item"><span class="meta-label">Location</span><span class="meta-value">Tokyo, Japan</span></div>
+                    <div class="meta-item"><span class="meta-label">Photographer</span><span class="meta-value">Yui Tanaka</span></div>
+                    <div class="meta-item"><span class="meta-label">Camera</span><span class="meta-value">Canon EOS R6</span></div>
+                    <div class="meta-item"><span class="meta-label">Settings</span><span class="meta-value">50mm • f/1.8 • 1/2000s • ISO 100</span></div>
+                    <div class="meta-item"><span class="meta-label">Resolution</span><span class="meta-value">5472 x 3648</span></div>
+                </div>
+                <div class="action-buttons"><a href="#_" class="btn btn-primary">Return to Gallery</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox 14 -->
+    <div id="lightbox-14" class="lightbox">
+        <a href="#_" class="lightbox-close-overlay" aria-label="Close lightbox"></a>
+        <div class="lightbox-content enhanced">
+            <a href="#_" class="close-btn" aria-label="Close lightbox">&times;</a>
+            <div class="lightbox-image-wrapper">
+                <img src="images/mountains_stars_900x1600_11.jpg" alt="Mountain Starscape">
+            </div>
+            <div class="lightbox-info">
+                <h2>Mountain Starscape</h2>
+                <div class="info-divider"></div>
+                <p class="description">The rugged peaks of the Dolomites piercing into a sky blanketed with millions of stars, showcasing the raw beauty of the Italian Alps at night.</p>
+                <div class="metadata-grid">
+                    <div class="meta-item"><span class="meta-label">Location</span><span class="meta-value">Dolomites, Italy</span></div>
+                    <div class="meta-item"><span class="meta-label">Photographer</span><span class="meta-value">Luca Rossi</span></div>
+                    <div class="meta-item"><span class="meta-label">Camera</span><span class="meta-value">Sony A7S III</span></div>
+                    <div class="meta-item"><span class="meta-label">Settings</span><span class="meta-value">14mm • f/1.4 • 20s • ISO 3200</span></div>
+                    <div class="meta-item"><span class="meta-label">Resolution</span><span class="meta-value">4240 x 2832</span></div>
+                </div>
+                <div class="action-buttons"><a href="#_" class="btn btn-primary">Return to Gallery</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox 15 -->
+    <div id="lightbox-15" class="lightbox">
+        <a href="#_" class="lightbox-close-overlay" aria-label="Close lightbox"></a>
+        <div class="lightbox-content enhanced">
+            <a href="#_" class="close-btn" aria-label="Close lightbox">&times;</a>
+            <div class="lightbox-image-wrapper">
+                <img src="images/ocean_waves_900x1600_4.jpg" alt="Ocean Waves">
+            </div>
+            <div class="lightbox-info">
+                <h2>Ocean Waves</h2>
+                <div class="info-divider"></div>
+                <p class="description">Powerful waves crashing along the pristine shores of the Gold Coast, capturing the dynamic energy of the Pacific Ocean.</p>
+                <div class="metadata-grid">
+                    <div class="meta-item"><span class="meta-label">Location</span><span class="meta-value">Gold Coast, Australia</span></div>
+                    <div class="meta-item"><span class="meta-label">Photographer</span><span class="meta-value">Ryan Davis</span></div>
+                    <div class="meta-item"><span class="meta-label">Camera</span><span class="meta-value">Fujifilm X-T4</span></div>
+                    <div class="meta-item"><span class="meta-label">Settings</span><span class="meta-value">200mm • f/5.6 • 1/4000s • ISO 400</span></div>
+                    <div class="meta-item"><span class="meta-label">Resolution</span><span class="meta-value">6240 x 4160</span></div>
+                </div>
+                <div class="action-buttons"><a href="#_" class="btn btn-primary">Return to Gallery</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox 16 -->
+    <div id="lightbox-16" class="lightbox">
+        <a href="#_" class="lightbox-close-overlay" aria-label="Close lightbox"></a>
+        <div class="lightbox-content enhanced">
+            <a href="#_" class="close-btn" aria-label="Close lightbox">&times;</a>
+            <div class="lightbox-image-wrapper">
+                <img src="images/swiss_village_900x1600_1.jpg" alt="Alpine Village">
+            </div>
+            <div class="lightbox-info">
+                <h2>Alpine Village</h2>
+                <div class="info-divider"></div>
+                <p class="description">The picturesque village of Zermatt nestled in the valley, with the majestic Matterhorn towering silently in the background.</p>
+                <div class="metadata-grid">
+                    <div class="meta-item"><span class="meta-label">Location</span><span class="meta-value">Zermatt, Switzerland</span></div>
+                    <div class="meta-item"><span class="meta-label">Photographer</span><span class="meta-value">Sophie Martin</span></div>
+                    <div class="meta-item"><span class="meta-label">Camera</span><span class="meta-value">Panasonic Lumix S5</span></div>
+                    <div class="meta-item"><span class="meta-label">Settings</span><span class="meta-value">24mm • f/8 • 1/250s • ISO 100</span></div>
+                    <div class="meta-item"><span class="meta-label">Resolution</span><span class="meta-value">6000 x 4000</span></div>
+                </div>
+                <div class="action-buttons"><a href="#_" class="btn btn-primary">Return to Gallery</a></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Enhanced Front-End Web Developer Task. Vanilla HTML & CSS.</p>
+    </footer>
+
+</body>
+</html>
